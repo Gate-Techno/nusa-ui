@@ -14,8 +14,13 @@ const Hero = () => {
             that are designed to be simple, accessible, and easy to use.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-            <Link href={"#features"} className="flex items-center gap-1">
-              First Setup
+            <Link
+              href="/dashboard"
+              className="relative flex items-center gap-1 transition-all duration-300 hover:text-white
+              before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-white
+              before:transition-all before:duration-300 before:ease-in-out hover:before:w-full"
+            >
+              Dashboard using Pages Router
             </Link>
           </div>
         </div>

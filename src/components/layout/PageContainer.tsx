@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 import { HeadMetaData } from "./HeadMetaData";
-import { Navbar } from "./navbar";
+import { Navbar } from "./Navbar";
 
 type PageContainerProps = {
   withHeader?: boolean;
