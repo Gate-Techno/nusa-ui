@@ -5,10 +5,7 @@ export default {
     darkMode: ["class"],
     content: ["./src/**/*.tsx"],
 	fontFamily: {
-		sans: [
-			'var(--font-geist-sans)',
-            ...fontFamily.sans
-        ]
+		sans: ['Nunito', 'sans-serif'],
 	},
   theme: {
   	extend: {
@@ -93,7 +90,10 @@ export default {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   			}
-  		}
+  		},
+		backgroundImage: {
+			'gradient': 'linear-gradient(to bottom,rgb(106, 44, 145),rgb(182, 79, 131))',
+		}
   	}
   },
 } satisfies Config;

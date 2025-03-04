@@ -7,50 +7,33 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <div className="fixed top-0 z-50 w-full shadow-md bg-background">
-      <div className="container flex items-center justify-between px-4 py-3 mx-auto lg:grid lg:grid-cols-3">
-        <button
-          className="block lg:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? (
-            // CLOSE MENU
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-x"
-            >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
-          ) : (
-            // OPEN MENU
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-text"
-            >
-              <path d="M17 6.1H3" />
-              <path d="M21 12.1H3" />
-              <path d="M15.1 18H3" />
-            </svg>
-          )}
-        </button>
-        <h1>Navbar</h1>
+    <div className="fixed top-0 z-50 w-full shadow-md">
+      <div className="container flex items-center justify-center px-4 py-3 mx-auto">
+        <div className="flex w-full max-w-4xl justify-between items-center">
+          <nav className="flex space-x-8">
+            <Link href="/" className="text-lg font-medium">
+              Docs
+            </Link>
+            <Link href="/start" className="text-lg font-medium">
+              Components
+            </Link>
+          </nav>
+
+          <div className="text-center">
+            <Link href="/">
+              <img src="assets/img/white-logo.png" alt="" className="h-16 w-auto"/>
+            </Link>
+          </div>
+
+          <nav className="flex space-x-8">
+            <Link href="/login" className="text-lg font-medium">
+              Login
+            </Link>
+            <Link href="/signup" className="text-lg font-medium">
+              Sign Up
+            </Link>
+          </nav>
+        </div>
       </div>
 
       {mobileMenuOpen && (
